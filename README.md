@@ -1,9 +1,9 @@
-# Smart-Feeding-Ikan
-Proyek Akhir Smart Feeding Ikan
+# Smart-Feeding-Fish
+Final Project: Smart Fish Feeding
 
-Develop : 
--> Airlangga
--> Ardhani Ahlan
+Developed by:
+- Airlangga
+- Ardhani Ahlan
 
 # Device 
 1. Esp8266(01)
@@ -12,13 +12,13 @@ Develop :
 4. HC-SR04
 5. Micro Servo SG90
 
-# TinkerCad Schema Wiring
+# TinkerCad WiringSchema
 
-# Apps Schema
+# App Schema
 
 
 # Wiring ESP-01 && Arduino Uno ( Upload Code -> Arduino Uno )
-== Wiring == 
+Wiring
 - RX -> TX
 - TX -> RX
 - EN -> VCC (5V)
@@ -26,7 +26,7 @@ Develop :
 - GND -> GND
 
 # Wiring ESP-01 && Arduino Uno ( Upload Code -> Esp-01 )
-== Wiring == 
+Wiring
 - RX -> RX
 - TX -> TX
 - EN -> VCC (5V)
@@ -36,15 +36,22 @@ Develop :
 - RST ( Arduino ) -> GND
 
 # Note
--> Mengirim data Serial dari Esp-01 -> Arduino Uno Menggunakan == Serial.begin
--> Mengirim data Serial dari Arduino Uno -> Esp-01 Menggunakan == espSerial
--> Receive data Menggunakan == espSerial
+- Mengirim data Serial dari Esp-01 -> Arduino Uno Menggunakan  Serial.begin
+- Mengirim data Serial dari Arduino Uno -> Esp-01 Menggunakan  espSerial
+- Receive data Menggunakan  espSerial
 
-# Jika Error Saat Upload ESP-01 Gunakan FTDI
-== Wiring == 
+English : 
+- Sending Serial data from Esp-01 to Arduino Uno using Serial.begin
+- Sending Serial data from Arduino Uno to Esp-01 using espSerial
+- Receiving data using espSerial
+
+# If Error Occurs When Uploading ESP-01, Use FTDI and Connect to ESP-01
+Wiring
 - RX -> TX
 - TX -> RX
 - EN -> VCC
 - GP100 -> GND
 - VCC -> VCC
 - GND -> GND
+
+# Document
