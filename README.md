@@ -12,6 +12,12 @@ Developed by:
 4. HC-SR04
 5. Micro Servo SG90
 
+# Library
+1. Servo
+2. SoftwareSerial
+3. Firebase
+4. TimeAlarms
+
 # TinkerCad WiringSchema
 
 # App Schema
