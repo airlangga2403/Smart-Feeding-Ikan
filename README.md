@@ -18,21 +18,25 @@ Developed by:
 3. Firebase
 4. TimeAlarms
 
-# TinkerCad WiringSchema
+# TinkerCad
+Wiring Schema
+
+Case Schema (3D)
 
 # App Schema
 
 
-# Wiring ESP-01 && Arduino Uno ( Upload Code -> Arduino Uno )
-Wiring
-- RX -> TX
-- TX -> RX
+# Wiring ESP-01 && Arduino Uno ( Using Arduino Uno Board)
+Wiring ( Upload Code -> Arduino Uno )
+Esp == Arduino
+- RX -> TX (Pin 4)
+- TX -> RX (Pin 5)
 - EN -> VCC (5V)
 - VCC -> VCC
 - GND -> GND
 
-# Wiring ESP-01 && Arduino Uno ( Upload Code -> Esp-01 )
-Wiring
+Wiring ( Upload Code -> Esp-01 )
+Esp == Arduino
 - RX -> RX
 - TX -> TX
 - EN -> VCC (5V)
@@ -42,9 +46,10 @@ Wiring
 - RST ( Arduino ) -> GND
 
 # Note
-- Mengirim data Serial dari Esp-01 -> Arduino Uno Menggunakan  Serial.begin
+- Mengirim data Serial dari Esp-01 -> Arduino Uno Menggunakan  espSerial
 - Mengirim data Serial dari Arduino Uno -> Esp-01 Menggunakan  espSerial
 - Receive data Menggunakan  espSerial
+- ESP set Software Serial (3,1) // RX, TX and Arduino Set Software Serial (4,5) // RX,TX
 
 English : 
 - Sending Serial data from Esp-01 to Arduino Uno using Serial.begin
