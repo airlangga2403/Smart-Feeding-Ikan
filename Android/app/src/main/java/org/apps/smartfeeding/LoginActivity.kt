@@ -20,12 +20,9 @@ class LoginActivity : AppCompatActivity() {
 
     private fun navigate() {
         binding.apply {
-            registerButton.setOnClickListener {
-                startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
-            }
 
             loginButton.setOnClickListener {
-                startActivity(Intent(this@LoginActivity, WifiActivity::class.java))
+                startActivity(Intent(this@LoginActivity, OnlineActivity::class.java))
             }
 
             back.setOnClickListener {
