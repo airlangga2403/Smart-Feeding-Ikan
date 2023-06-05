@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".ui.notifications.NotificationsFragment">
+    tools:context=".ui.notifications.OtomatisFragment">
 
     <TextView
         android:id="@+id/textView6"
@@ -89,34 +88,74 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <Button
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/jam"
-            android:layout_width="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:text="h"
-            android:textColor="@color/background" />
+            android:hint="Hours"
+            app:layout_constraintEnd_toStartOf="@id/menit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <Button
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:id="@+id/jam_edit_text"
+                android:digits="0123456789"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:max="24"
+                android:background="@color/white"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/menit"
-            android:layout_width="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:text="M"
-            android:textColor="@color/background" />
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Minute"
+            app:layout_constraintStart_toEndOf="@id/jam">
 
-        <Button
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/menit_editText"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:digits="0123456789"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:max="59"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/detik"
-            android:layout_width="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="@color/white"
-            android:text="1.0"
-            android:textColor="@color/background" />
+            android:layout_marginStart="8dp"
+            android:hint="Seconds"
+            app:layout_constraintStart_toEndOf="@id/menit">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/detik_editText"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:digits="0123456789"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:max="59"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
     <Button
@@ -131,7 +170,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/status_waktupakan" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
 
     <TextView
         android:id="@+id/status_waktupakan"
@@ -174,9 +213,8 @@
 
         <Button
             android:id="@+id/kosong_empat"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:text="0.4"
@@ -184,17 +222,18 @@
 
         <Button
             android:id="@+id/kosong_delapan"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
             android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:backgroundTint="@color/white"
             android:text="0.8"
             android:textColor="@color/background" />
 
         <Button
             android:id="@+id/satu"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/white"

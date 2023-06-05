@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:text="Ardhan"
+        android:text="User"
         android:textColor="@color/ijo"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,35 +44,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/buka_button"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/ijo"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
-
-        <Button
-            android:id="@+id/buka_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/ijo"
-            android:text="Buka"
-            android:textColor="@color/background" />
-
-        <Button
-            android:id="@+id/tutup_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            android:text="Tutup"
-            android:textColor="@color/background" />
-    </LinearLayout>
-
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Buka"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:textColor="@color/background" />
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
@@ -84,7 +68,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+        app:layout_constraintTop_toBottomOf="@+id/buka_button" />
 
     <LinearLayout
         android:id="@+id/linearLayout4"

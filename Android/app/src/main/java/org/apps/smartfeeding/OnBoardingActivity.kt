@@ -1,9 +1,10 @@
 package org.apps.smartfeeding
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import org.apps.smartfeeding.databinding.ActivityOnBoardingBinding
+import org.apps.smartfeeding.ui.connect_bluetooth.ConnectBTActivity
 
 class OnBoardingActivity : AppCompatActivity() {
 
@@ -21,6 +22,8 @@ class OnBoardingActivity : AppCompatActivity() {
 
     private fun navigate() {
         binding.apply {
+
+            // Online
             wifiButton.setOnClickListener {
                 val intent = Intent(this@OnBoardingActivity, LoginActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
@@ -28,8 +31,10 @@ class OnBoardingActivity : AppCompatActivity() {
                 finish()
             }
 
+            // Offline
+
             bluetoothButton.setOnClickListener {
-                val intent = Intent(this@OnBoardingActivity, BluetoothActivity::class.java)
+                val intent = Intent(this@OnBoardingActivity, ConnectBTActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
                 startActivity(intent)
                 finish()

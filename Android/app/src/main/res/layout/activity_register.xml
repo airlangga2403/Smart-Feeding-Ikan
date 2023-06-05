@@ -8,14 +8,14 @@
     tools:context=".RegisterActivity">
 
     <ImageView
-    android:id="@+id/back"
-    android:layout_width="30dp"
-    android:layout_height="30dp"
-    android:layout_marginStart="24dp"
-    android:layout_marginTop="24dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:srcCompat="@drawable/ic_back" />
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
 
     <ImageView
         android:id="@+id/imageView4"

@@ -4,4 +4,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="title_activity_connect_bt">Please Connect to Bluetooth</string>
+    <string name="connect_status_activity_connect_bt">List Paired Device</string>
+    <string name="pengecekan">Checked on %1$s</string>
 </resources>
