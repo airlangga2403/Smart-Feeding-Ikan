@@ -10,6 +10,7 @@ import android.content.Intent
 import android.os.AsyncTask
 import android.os.Build
 import android.widget.Toast
+import androidx.core.app.ActivityCompat.startActivityForResult
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import kotlinx.coroutines.Dispatchers
@@ -51,15 +52,16 @@ class SmartFeedingRepository() {
             }
         bluetoothAdapter = bluetoothManager.adapter
 
-//        if (bluetoothAdapter == null) {
-//            // Device doesn't support Bluetooth
-//            // Handle this condition accordingly
-//            return
-//        }
+        if (bluetoothAdapter == null) {
+            // Device doesn't support Bluetooth
+            // Handle this condition accordingly
+            Toast.makeText(context, "Sorry Your Device Not Support Bluetooth", Toast.LENGTH_SHORT)
+                .show()
+            return
+        }
 
         if (!bluetoothAdapter.isEnabled) {
-            val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
-            // Handle enabling Bluetooth using startActivityForResult if needed
+            Toast.makeText(context, "Please Enable Bluetooth First", Toast.LENGTH_SHORT).show()
         }
 
         deviceNamesSet = HashSet()
@@ -81,23 +83,23 @@ class SmartFeedingRepository() {
         }
     }
 
-    fun readDataFromBluetooth(){
+
+    fun readDataFromBluetooth() {
         val buffer = ByteArray(1024)
         val inputStream: InputStream = bluetoothSocket.value?.inputStream ?: return
 
-            try {
-                val bytes: Int = inputStream.read(buffer)
-                val receivedData = buffer.decodeToString(0, bytes)
+        try {
+            val bytes: Int = inputStream.read(buffer)
+            val receivedData = buffer.decodeToString(0, bytes)
 
-                // Lakukan sesuatu dengan data yang diterima
+            // Lakukan sesuatu dengan data yang diterima
 //                    handleReceivedData(receivedData)
-                    _receivedData.value = receivedData
-                }
-             catch (e: IOException) {
-                e.printStackTrace()
-                // Tangani kesalahan pembacaan data
-            }
+            _receivedData.value = receivedData
+        } catch (e: IOException) {
+            e.printStackTrace()
+            // Tangani kesalahan pembacaan data
         }
+    }
 
 
     fun sendDataToBluetooth(data: String, context: Context) {
@@ -106,7 +108,7 @@ class SmartFeedingRepository() {
             try {
                 socket.outputStream.write(data.toByteArray())
                 // Handle successful data sending
-                Toast.makeText(context, "Sukses Sending Data ${data}",Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Sukses Sending Data ${data}", Toast.LENGTH_SHORT).show()
             } catch (e: IOException) {
                 e.printStackTrace()
                 // Handle failed data sending
